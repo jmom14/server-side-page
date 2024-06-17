@@ -16,6 +16,7 @@ const nextConfig = {
     AUTH_GITHUB_SECRET: process.env.AUTH_GITHUB_SECRET,
     AUTH_TRUST_HOST: process.env.AUTH_TRUST_HOST,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
   }
 };
 
