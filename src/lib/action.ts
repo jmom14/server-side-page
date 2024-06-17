@@ -83,9 +83,6 @@ export const deleteUser = async (formData: any) => {
 
 export const handleGithubLogin = async () => {
   "use server";
-  console.log('CLIENT_ID: ', process.env.AUTH_GITHUB_ID)
-  console.log('GITHUB_SECRET_KEY: ', process.env.AUTH_GITHUB_SECRET)
-  console.log('AUTH_TRUST_HOST: ', process.env.AUTH_TRUST_HOST)
   await signIn("github");
 };
 
