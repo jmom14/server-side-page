@@ -31,10 +31,7 @@ const login = async (credentials: any) => {
 
 export const { handlers: { GET, POST }, signIn, signOut, auth } = NextAuth({
   providers: [
-    GitHub({
-      clientId: process.env.AUTH_GITHUB_ID,
-      clientSecret: process.env.AUTH_GITHUB_SECRET,
-    }),
+    GitHub,
     CredentialsProvider({
       async authorize(credentials) {
         try {
