@@ -2,6 +2,7 @@ export const authConfig = {
   pages: {
     signIn: "/login",
   },
+  trustHost: true,
   providers: [],
   callbacks: {
     // https://next-auth.js.org/configuration/callbacks
@@ -40,6 +41,7 @@ export const authConfig = {
       // ONLY UNAUTHENTICATED USERS CAN REACH THE LOGIN PAGE
 
       if (isOnLoginPage && user) {
+        console.log('nextUrl: ', request.nextUrl)
         return Response.redirect(new URL("/", request.nextUrl));
       }
 
