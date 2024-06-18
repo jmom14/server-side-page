@@ -30,6 +30,7 @@ const login = async (credentials: any) => {
 }
 
 export const { handlers: { GET, POST }, signIn, signOut, auth } = NextAuth({
+  trustHost: true,
   providers: [
     GitHub,
     CredentialsProvider({
