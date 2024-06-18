@@ -27,10 +27,6 @@ const links = [
 
 const Links = ({ session }) => {
   const [open, setOpen] = useState(false);
-  console.log('session: ', session)
-  // TEMPORARY
-  // const session = true;
-  // const isAdmin = true;
 
   return (
     <div className={styles.container}>
