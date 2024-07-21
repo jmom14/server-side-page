@@ -46,7 +46,7 @@ export const { handlers: { GET, POST }, signIn, signOut, auth } = NextAuth({
     })
   ],
   callbacks: {
-    async signIn({ user, account, profile }: any) {
+    async signIn({ user, account, profile, email, credentials }: any) {
       console.log(`Account provider: ${account.provider}`)
       if (account.provider === "github") {
         connectToDb();

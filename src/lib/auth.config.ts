@@ -16,7 +16,7 @@ export const authConfig = {
     async session({ session, token }: any) {
       if (token) {
         session.user.id = token.id;
-        session.user.isAdmin = token.isAdmin;
+        session.user.isAdmin = true;
       }
       return session;
     },
@@ -41,7 +41,6 @@ export const authConfig = {
       // ONLY UNAUTHENTICATED USERS CAN REACH THE LOGIN PAGE
 
       if (isOnLoginPage && user) {
-        console.log('nextUrl: ', request.nextUrl)
         return Response.redirect(new URL("/", request.nextUrl));
       }
 

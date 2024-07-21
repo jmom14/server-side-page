@@ -1,4 +1,5 @@
 const { default: mongoose } = require("mongoose")
+mongoose.set('strictQuery', true);
 
 type Connection = {
   isConnected: boolean,
